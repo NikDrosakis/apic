@@ -7,6 +7,7 @@ git is needed to retrieve the sources. Compiling the sources will require CMake 
 If you're on Ubuntu and want to skip the compilation process you can add the official PPA providing nightly builds:
 
 # installation 
+```
 apt install build-essential
 sudo apt-get install cmake
 apt install libpistache-dev
@@ -19,3 +20,4 @@ ninja -C build
 sudo ninja -C build install
 ufw allow 9080
 g++ -std=c++17 -o apic main.cpp -lpistache
+```
