@@ -6,7 +6,7 @@ git is needed to retrieve the sources. Compiling the sources will require CMake 
 
 If you're on Ubuntu and want to skip the compilation process you can add the official PPA providing nightly builds:
 
-# installation 
+# installation (debian environments)
 ```
 apt install build-essential
 sudo apt-get install cmake
