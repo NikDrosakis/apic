@@ -6,12 +6,16 @@ git is needed to retrieve the sources. Compiling the sources will require CMake 
 
 If you're on Ubuntu and want to skip the compilation process you can add the official PPA providing nightly builds:
 
-sudo add-apt-repository ppa:pistache+team/unstable
-sudo apt update
-sudo apt install libpistache-dev
-Otherwise, here's how to build and install the latest release:
-
-git clone https://github.com/pistacheio/pistache.git
+# installation 
+apt install build-essential
+sudo apt-get install cmake
+apt install libpistache-dev
+cd /var/www/apic
+git clone https://github.com/oktal/pistache.git
 cd pistache
-meson setup build
-meson install -C build
+sudo apt-get install meson
+meson build
+ninja -C build
+sudo ninja -C build install
+ufw allow 9080
+g++ -std=c++17 -o apic main.cpp -lpistache
